@@ -315,7 +315,7 @@ const createScene = async () => {
     const topPallet = palletsStack[palletsStack.length - 1];
 
     const dist = Vector3.Distance(forkliftRoot.position, topPallet.getAbsolutePosition());
-    const PICKUP_RADIUS = 10; // recoge antes
+    const PICKUP_RADIUS = 10;
 
     if (dist < PICKUP_RADIUS) {
       hasPallet = true;
@@ -383,7 +383,7 @@ const createScene = async () => {
       else if (hasPallet && distDelivery < 3.0) msg += "👉 <b>Q</b> para entregar.";
       else if (!hasPallet && remaining > 0) msg += "Busca un palé para recoger.";
       else if (!hasPallet && remaining === 0) msg += "🚫 Ya no quedan palés.";
-      else msg += "Lleva el palé a la zona azul.";
+      else msg += "Lleva el palé al camión.";
       msg += "<br>👉 Presiona <b>R</b> para bajarte.";
     }
 
